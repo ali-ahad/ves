@@ -169,3 +169,23 @@ img.large {
   font-size: 1.6rem;
   margin-top: 0;
 }
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info {
+  color: salmon;
+  background-color: sandybrown;
+}
+
+.danger {
+  color: rgb(216, 86, 86);
+}
+
+.alert-danger {
+  color: antiquewhite;
+  background-color: blanchedalmond;
+}

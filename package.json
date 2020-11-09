@@ -1,5 +1,27 @@
 {
   "dependencies": {
+    "express": "^4.17.1",
     "react-router-dom": "^5.2.0"
+  },
+  "name": "geys",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ali-ahad/ves.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ali-ahad/ves/issues"
+  },
+  "homepage": "https://github.com/ali-ahad/ves#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }

@@ -64,6 +64,41 @@ a:hover {
   color: grey;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem; 
+}
+
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem lightblue solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: lightblue;
+}
+
+button.block {
+  width: 100%;
+}
+
+button:hover {
+  border: 0.1rem blue solid;
+}
+
+/* Header */
 header a {
   color: coral;
   padding: 1rem;
@@ -82,14 +117,35 @@ header a {
   justify-content: center;
 }
 
+.row.top {
+  align-items: flex-start;
+}
+
+.col-1 {
+  flex: 1 1 25rem;
+}
+
+.col-2 {
+  flex: 2 1 50rem;
+}
+
 /* Image */
 img {
   border-radius: 0.5rem;
+  align-items: center;
 }
 
 img.medium {
   width: 300px;
   height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+img.large {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Card */

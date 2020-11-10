@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 import ShopScreen from './screens/ShopScreen';
 import ProductScreen from './screens/ProductScreen';
 import HomeScreen from './screens/HomeScreen';
 import ArtistsScreen from './screens/ArtistsScreen';
 import AboutUsScreen from './screens/AboutUsScreen';
 import ExhibitionsScreen from './screens/ExhibitionsScreen';
-import cartScreen from './screens/cartScreen';
+import CartScreen from './screens/CartScreen';
 
 function App() {
   return (
@@ -14,19 +14,19 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </div>
           <div>
-            <a href="/shop">Shop</a>
+            <Link to="/shop">Shop</Link>
           </div>
           <div>
-            <a href="/artists">Artists</a>
+            <Link to="/artists">Artists</Link>
           </div>
           <div>
-            <a href="/exhibitions">Exhibitions</a>
+            <Link to="/exhibitions">Exhibitions</Link>
           </div>
           <div>
-            <a href="/aboutus">About Us</a>
+            <Link to="/aboutus">About Us</Link>
           </div>
         </header>
         <main>
@@ -36,7 +36,7 @@ function App() {
           <Route path="/aboutus" component={AboutUsScreen} exact></Route>
           <Route path="/shop/product/:id" component={ProductScreen}></Route>
           <Route path="/shop" component={ShopScreen} exact></Route>
-          <Route path="/cart/:id?" component={cartScreen}></Route>
+          <Route path="/cart/:id?" component={CartScreen}></Route>
         </main>
         <footer className="row center">
           All rights reserved @2020

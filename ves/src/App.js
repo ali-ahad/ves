@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 import ShopScreen from './screens/ShopScreen';
 import ProductScreen from './screens/ProductScreen';
 import HomeScreen from './screens/HomeScreen';
@@ -14,19 +14,19 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </div>
           <div>
-            <a href="/shop">Shop</a>
+            <Link to="/shop">Shop</Link>
           </div>
           <div>
-            <a href="/artists">Artists</a>
+            <Link to="/artists">Artists</Link>
           </div>
           <div>
-            <a href="/exhibitions">Exhibitions</a>
+            <Link to="/exhibitions">Exhibitions</Link>
           </div>
           <div>
-            <a href="/aboutus">About Us</a>
+            <Link to="/aboutus">About Us</Link>
           </div>
           <div>
             <a href="/cart">Cart</a>

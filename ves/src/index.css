@@ -145,10 +145,19 @@ header a {
   flex: 2 1 50rem;
 }
 
+.min-30 {
+  min-width: 30rem;
+}
+
 /* Image */
 img {
   border-radius: 0.5rem;
   align-items: center;
+}
+
+img.small {
+  max-width: 5rem;
+  width: 100%;
 }
 
 img.medium {
@@ -163,6 +172,8 @@ img.large {
   justify-content: center;
   align-items: center;
 }
+
+
 
 /* Card */
 .card {
@@ -205,3 +216,4 @@ img.large {
   color: antiquewhite;
   background-color: blanchedalmond;
 }
+

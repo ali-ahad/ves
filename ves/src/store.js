@@ -4,7 +4,11 @@ import { productDetailsReducer, productListReducer } from './reducers/productRed
 import { cartReducer } from './reducers/cartReducers';
 
 // Load a list of products in data.js
-const initialState = {};
+const initialState = {
+  cart: {
+    cartItems: localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [],  
+  }
+};
 
 // Adding reducers to store.js
 const reducer = combineReducers({

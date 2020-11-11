@@ -7,8 +7,13 @@ import ArtistsScreen from './screens/ArtistsScreen';
 import AboutUsScreen from './screens/AboutUsScreen';
 import ExhibitionsScreen from './screens/ExhibitionsScreen';
 import CartScreen from './screens/CartScreen';
+import { useSelector } from 'react-redux';
 
 function App() {
+
+  const cart = useSelector(state => state.cart);
+  const { cartItems } = cart;
+
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -29,7 +34,11 @@ function App() {
             <Link to="/aboutus">About Us</Link>
           </div>
           <div>
-            <a href="/cart">Cart</a>
+            <Link to="/cart">Cart
+            {cartItems.length > 0 && (
+                <span className="badge">{cartItems.length}</span>
+            )} 
+            </Link>
           </div>
         </header>
         <main>

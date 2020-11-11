@@ -8,6 +8,7 @@ import MessageBox from '../components/MessageBox';
 export default function ProductScreen(props) {
   const dispatch = useDispatch();
   const productId = props.match.params.id;
+  //const [qty, setQty] = useState(1);
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
 
@@ -15,6 +16,9 @@ export default function ProductScreen(props) {
     dispatch(detailProduct(productId));
   }, [dispatch, productId]);
 
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${productId}?qty=${1}`);
+  }
   return (
     <div>
       {loading ? (
@@ -45,9 +49,11 @@ export default function ProductScreen(props) {
                   <div className="price">${product.price}</div>
                 </div>
               </li>
-              <li>
-                <button className="primary block">Add to Cart</button>
-              </li>
+              {product.count > 0 && (
+                <li>
+                  <button onClick={addToCartHandler} className="primary block">Add to Cart</button>
+                </li>     
+              )}        
             </ul>
           </div>
         </div>

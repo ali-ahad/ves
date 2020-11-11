@@ -6,6 +6,7 @@ import HomeScreen from './screens/HomeScreen';
 import ArtistsScreen from './screens/ArtistsScreen';
 import AboutUsScreen from './screens/AboutUsScreen';
 import ExhibitionsScreen from './screens/ExhibitionsScreen';
+import CartScreen from './screens/CartScreen';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           <div>
             <a href="/aboutus">About Us</a>
           </div>
+          <div>
+            <a href="/cart">Cart</a>
+          </div>
         </header>
         <main>
           <Route path="/" component={HomeScreen} exact></Route>
@@ -35,6 +39,7 @@ function App() {
           <Route path="/aboutus" component={AboutUsScreen} exact></Route>
           <Route path="/shop/product/:id" component={ProductScreen}></Route>
           <Route path="/shop" component={ShopScreen} exact></Route>
+          <Route path="/cart/:id?" component={CartScreen}></Route>
         </main>
         <footer className="row center">
           All rights reserved @2020
